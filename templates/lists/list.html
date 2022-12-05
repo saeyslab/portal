@@ -1,0 +1,51 @@
+{% extends "page.html" %}
+
+{% block body %}
+  {% set page_class = "docs single" %}
+{% endblock body %}
+
+{% block header %}
+  {{ macros_header::header(current_section=current_section)}}
+{% endblock header %}
+
+{% block content %}
+<div class="wrap container" role="document">
+  <div class="content">
+    <div class="row flex-xl-nowrap">
+	  {{ macros_sidebar::docs_sidebar(current_section=current_section) }}
+	  {{ macros_toc::docs_toc(page=page) }}
+      <main class="docs-content col-lg-11 col-xl-9">
+        <h1>{{ page.title }}</h1>
+        {% if page.extra.lead %}<p class="lead">{{ page.extra.lead | safe }}</p>{% endif %}
+        {{ page.content | safe }}
+        <table>
+          <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Link</th>
+          </tr>
+          
+        {% set data = load_data(path=page.extra.path, required=false) -%}
+        {% if data %} 
+          {% for entry in data.entry %}
+          <tr>
+            <td>{{ entry.title }}</td>
+            <td>{{ entry.description }}</td>
+            <td>
+              <a href=https://hms-dbmi.github.io/vizarr/?source=https://dl01.irc.ugent.be/{{ entry.path }} target="_blank">ViZarr</a>
+              <a href=https://kitware.github.io/itk-vtk-viewer/app/?rotate=false&fileToLoad=https://dl01.irc.ugent.be/{{ entry.path }} target="_blank">VTK.js</a>
+              <a href=https://ome.github.io/ome-ngff-validator/?source=https://dl01.irc.ugent.be/{{ entry.path }} target="_blank">Validator</a>
+            </td>
+          </tr>
+          {% endfor %}
+        {% else %}No data found{% endif %}
+      </table> 
+        {% if config.extra.edit_page %}
+          {{ macros_edit_page::docs_edit_page(current_path=current_path) }}
+        {% endif %}
+        {{ macros_navigation::docs_navigation(page=page, current_section=current_section) }}
+      </main>
+    </div>
+  </div>
+</div>
+{% endblock content %}
