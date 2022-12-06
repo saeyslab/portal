@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://dl01.irc.ugent.be/portal"
+base_url = "https://saeyslab.github.io/portal"
 title = "DaMBi Data Portal"
 description = "DaMBi Data Portal is a hosting server for large bioinformatics datasets. It allows access and interactive viewing of data from spatial omics experiments."
 
