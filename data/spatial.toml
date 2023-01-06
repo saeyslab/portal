@@ -1,0 +1,34 @@
+[[entry]]
+title = "cyx"
+description = ""
+path = "spatial/v0.4/cyx.ome.zarr"
+
+[[entry]]
+title = "multi-image"
+description = ""
+path = "spatial/v0.4/multi-image.ome.zarr"
+
+[[entry]]
+title = "tcyx"
+description = ""
+path = "spatial/v0.4/tcyx.ome.zarr"
+
+[[entry]]
+title = "tczyx"
+description = ""
+path = "spatial/v0.4/tczyx.ome.zarr"
+
+[[entry]]
+title = "tyx"
+description = ""
+path = "spatial/v0.4/tyx.ome.zarr/"
+
+[[entry]]
+title = "yx"
+description = ""
+path = "spatial/v0.4/yx.ome.zarr/"
+
+[[entry]]
+title = "zyx"
+description = ""
+path = "spatial/v0.4/zyx.ome.zarr/"
