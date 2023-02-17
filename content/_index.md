@@ -5,7 +5,7 @@ title = "DaMBi Data Portal"
 # The homepage contents
 [extra]
 lead = 'The <b>DaMBi Data Portal</b> is a hosting server for single cell and bioimaging datasets maintained by the <a href="https://vib.be/labs/saeys-lab">Data Mining and Modelling for Biomedicine lab</a> of the <a href="https://www.irc.ugent.be/">VIB IRC</a>. It allows access and interactive viewing using a browser, local viewer or notebook.'
-url = "/docs/getting-started/introduction/"
+url = "/docs/user-guide"
 url_button = "Get started"
 repo_version = "GitHub v0.1.0"
 repo_license = "Open-source MIT License."
